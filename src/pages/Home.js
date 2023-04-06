@@ -1,4 +1,5 @@
 import React from "react";
+import SearchForm from "../components/SearchForm/SearchForm";
 
 function Home() {
   return (
@@ -8,7 +9,7 @@ function Home() {
           <img src="images/hipo-logo.svg" alt="hipolabs logo" />
         </div>
         <h1 className="text-white text-[1.375rem]">Github Profile Explorer</h1>
-        {/* <SearchForm /> */}
+        <SearchForm />
       </div>
     </div>
   );
