@@ -11,6 +11,16 @@ module.exports = {
         "hipo-light-green": "#72F2E4",
         "hipo-green": "#0DA090",
       },
+      keyframes: {
+        skeleton: {
+          "0%": { backgroundColor: "#222222" },
+          "50%": { backgroundColor: "#484848" },
+          "100%": { backgroundColor: "#222222" },
+        },
+      },
+      animation: {
+        skeleton: "skeleton 1.3s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

@@ -10,7 +10,6 @@ function useFetchUser(user_name) {
 
   useEffect(() => {
     // fetch user with octokit
-    // octokit instance is separated from this hook
     const fetchUser = async () => {
       try {
         setUserLoading(true);
@@ -23,7 +22,10 @@ function useFetchUser(user_name) {
       } catch (error) {
         if (!isCancelled) setUserError(error);
       }
-      setUserLoading(false);
+
+      setTimeout(() => {
+        setUserLoading(false);
+      }, 5000);
     };
     fetchUser();
     // cancel fetch if component unmounts

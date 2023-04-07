@@ -1,0 +1,62 @@
+/* SkeletonWrapper.css */
+
+.skeleton-wrapper {
+  max-width: 548px;
+  width: 100%;
+  margin: auto;
+  margin-top: 10.375rem;
+  padding: 0 2px;
+}
+
+.base {
+  height: 277px;
+  position: relative;
+}
+
+.avatar-container {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.animate-skeleton {
+  width: 100px;
+  height: 100px;
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.text-container {
+  margin-top: 25px;
+  margin-left: 10px;}
+
+.skeleton-text {
+  width: 126px;
+  height: 17px;
+  margin-top: 12px;
+}
+
+.skeleton-text-small {
+  width: 71px;
+  height: 11px;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #222222;
+  }
+  50% {
+    background-color: #484848;
+  }
+  100% {
+    background-color: #222222;
+  }
+}
