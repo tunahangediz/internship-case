@@ -10,6 +10,7 @@ function useFetchUser(user_name) {
 
   useEffect(() => {
     // fetch user with octokit
+    const chachedUser = localStorage.getItem(user_name);
     const fetchUser = async () => {
       try {
         setUserLoading(true);
@@ -18,16 +19,21 @@ function useFetchUser(user_name) {
         });
         // if component unmounts before fetch completes
         // don't set state
-        if (!isCancelled) setUser(response.data);
+        if (!isCancelled) {
+          setUser(response.data);
+          localStorage.setItem(user_name, JSON.stringify(response.data));
+        }
       } catch (error) {
         if (!isCancelled) setUserError(error);
       }
-
-      setTimeout(() => {
-        setUserLoading(false);
-      }, 2000);
+      setUserLoading(false);
     };
-    fetchUser();
+    // if user is cached in local storage
+    if (chachedUser) {
+      setUser(JSON.parse(chachedUser));
+    } else {
+      fetchUser();
+    }
     // cancel fetch if component unmounts
     return () => setIsCancelled(true);
   }, []);

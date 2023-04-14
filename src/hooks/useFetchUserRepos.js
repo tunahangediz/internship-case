@@ -8,6 +8,9 @@ function useFetchUserRepos(user_name, perPage = 2) {
   const [repoError, setRepoError] = useState(null);
   const [isCancelled, setIsCancelled] = useState(false);
 
+  // get cached repos from local storage
+  const cachedRepos = localStorage.getItem(user_name + "-repos");
+
   // fetch repos with octokit
   const fetchRepos = async () => {
     try {
@@ -20,7 +23,13 @@ function useFetchUserRepos(user_name, perPage = 2) {
       });
       // if component unmounts before fetch completes
       // don't set state
-      if (!isCancelled) setRepos(response.data);
+      if (!isCancelled) {
+        setRepos(response.data);
+        localStorage.setItem(
+          user_name + "-repos",
+          JSON.stringify(response.data)
+        );
+      }
     } catch (error) {
       if (!isCancelled) setRepoError(error);
     }
@@ -28,7 +37,12 @@ function useFetchUserRepos(user_name, perPage = 2) {
   };
 
   useEffect(() => {
-    fetchRepos();
+    // if repos are cached in local storage
+    if (cachedRepos) {
+      setRepos(JSON.parse(cachedRepos));
+    } else {
+      fetchRepos();
+    }
     // cancel fetch if component unmounts
     return () => setIsCancelled(true);
   }, []);

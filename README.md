@@ -12,10 +12,10 @@ This web application allows users to explore Github users and their repositories
 
 ## Bonus Features
 
+- Results chaced on local storage. If you search with same username you will get the cached results without making new api request
 - Load more repositories by clicking on the "Load More" button and display loading indicator
-- Deployed on Vercel
-- Display a custom error page if the API request fails or there are no search results
-- Display a message when there are no search results
+- Deployed on Vercel - [Visit Website](https://github-profile-explorer-pink.vercel.app/)
+- Display a custom error page if the API request fails or there are no search results. Display a message when there are no search results
 - The website responsive and suitable for different screen sizes
 
 ## Getting Started
