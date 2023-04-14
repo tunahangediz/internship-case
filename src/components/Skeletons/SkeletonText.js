@@ -1,8 +1,16 @@
 import classNames from "classnames";
 import React from "react";
 
-function SkeletonText({ className }) {
-  return <div className={classNames("animate-skeleton", className)}></div>;
+function SkeletonText({ className, noAnimate }) {
+  return (
+    <div
+      className={classNames(
+        { "no-animate": noAnimate },
+        "animate-skeleton",
+        className
+      )}
+    ></div>
+  );
 }
 
 export default SkeletonText;

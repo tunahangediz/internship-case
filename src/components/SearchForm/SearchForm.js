@@ -13,7 +13,7 @@ function SearchForm() {
     // if in front of username has @ remove @ from username
     const usernameWithoutAt = removeAt(username);
     // navigate to user page
-    navigate(`/user/${usernameWithoutAt}`);
+    navigate(`/${usernameWithoutAt}`);
   };
 
   return (

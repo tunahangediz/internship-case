@@ -8,7 +8,7 @@ function RoutesHandler() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="user/:username" element={<UserProfilePage />} />
+        <Route path="/:username" element={<UserProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

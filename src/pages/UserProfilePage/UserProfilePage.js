@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFetchUser from "../../hooks/useFetchUser";
 import Profile from "../../components/Profile/Profile";
@@ -6,6 +5,7 @@ import Repositories from "../../components/Repositories/Repositories";
 import useFetchUserRepos from "../../hooks/useFetchUserRepos";
 import "./UserProfilePage.css";
 import ProfileSkeleton from "../../components/Skeletons/ProfileSkeleton";
+import Error from "../../components/Error/Error";
 
 function UserProfilePage() {
   const { username } = useParams();
@@ -21,7 +21,7 @@ function UserProfilePage() {
 
   // if user data is not loading and there is an error
   if (!userLoading && userError) {
-    return <div className="w-full flex justify-center">Error</div>;
+    return <Error />;
   }
 
   if (user && !userLoading && !userError && !repoLoading && !repoError) {
