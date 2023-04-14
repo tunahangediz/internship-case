@@ -4,15 +4,15 @@ This web application allows users to explore Github users and their repositories
 
 ## Basic Features
 
-- Search for Github users by their username
-- View user details, such as name, avatar, bio, and number of followers/following
-- View user repositories, including name, description, language, and number of stars/forks/watchers
+- Search for Github users by their username with or without '@'
+- View user details, such as name, avatar, user_name, number of repositories and followers/following
+- View user repositories, including name, description and number of stars
 - Click on a repository to open it on Github in a new browser tab
 - Display a loading indicator while requests are pending
 
 ## Bonus Features
 
-- Load more repositories by clicking on the "Load More" button
+- Load more repositories by clicking on the "Load More" button and display loading indicator
 - Deployed on Vercel
 - Display a custom error page if the API request fails or there are no search results
 - Display a message when there are no search results
