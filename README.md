@@ -23,7 +23,7 @@ This web application allows users to explore Github users and their repositories
 To run this application locally, clone this repository and run the following commands:
 
 ```bash
- cd github-profile-explorer
+ cd hipo-internship-case-
  npm install
  npm start
 ```
