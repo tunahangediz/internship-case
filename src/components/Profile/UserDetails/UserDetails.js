@@ -9,19 +9,19 @@ function UserDetails({ user }) {
         <h2 className="h2 text-white">{name}</h2>
         <h3 className="h3 username text-white ">@{login}</h3>
         {/* it's only display small screens and ml-2 for optical symmetry */}
-        {/* <a
-          className="ml-2 mt-2 text-[0.875rem] flex sm:hidden"
-          href={`https://github.com/${login}`}
+        <a
+          className="view-on-github-mobile text-white"
+          href={`https://github.com/${user.login}`}
           target="_blank"
           rel="noopener noreferrer"
         >
           View on Github{" "}
           <img
-            src="images/link.svg"
+            src="/images/link.svg"
             alt="link-chain icon"
-            className="h-[19.2px] w-6  ml-[0.375rem]"
+            className="link-chain-icon"
           />
-        </a> */}
+        </a>
       </div>
     </div>
   );

@@ -4,7 +4,8 @@
   max-width: 548px;
   width: 100%;
   margin: auto;
-  padding-top: 166px;
+  padding: 0 15px;
+  padding-top: 100px;
 }
 
 .base {
@@ -88,5 +89,14 @@
   }
   100% {
     background-color: #222222;
+  }
+}
+
+@media (min-width: 640px) {
+  .skeleton-wrapper {
+    max-width: 548px;
+    width: 100%;
+    margin: auto;
+    padding-top: 166px;
   }
 }

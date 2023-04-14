@@ -16,11 +16,7 @@ function UserProfilePage() {
 
   // if user data is loading
   if (userLoading) {
-    return (
-      <div className="w-full flex justify-center ">
-        <ProfileSkeleton />
-      </div>
-    );
+    return <ProfileSkeleton />;
   }
 
   // if user data is not loading and there is an error

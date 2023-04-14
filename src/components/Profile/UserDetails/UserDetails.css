@@ -20,3 +20,19 @@
 .username {
   margin-top: 4px;
 }
+
+.view-on-github-mobile {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  color: #e5e5e5;
+}
+.view-on-github-mobile:hover {
+  color: #72f2e4;
+}
+
+@media (min-width: 640px) {
+  .view-on-github-mobile {
+  }
+}

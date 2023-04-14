@@ -1,5 +1,13 @@
 .profile-page {
   max-width: 548px;
   margin: 0 auto;
-  padding-top: 166px;
+  padding: 0 15px;
+  padding-top: 100px;
+}
+@media (min-width: 640px) {
+  .profile-page {
+    max-width: 548px;
+    margin: 0 auto;
+    padding-top: 166px;
+  }
 }
