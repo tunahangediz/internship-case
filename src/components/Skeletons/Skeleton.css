@@ -1,0 +1,92 @@
+/* SkeletonWrapper.css */
+
+.skeleton-wrapper {
+  max-width: 548px;
+  width: 100%;
+  margin: auto;
+  padding-top: 166px;
+}
+
+.base {
+  position: relative;
+  width: 100%;
+  background-color: #0a0a0a;
+  border: 1px solid #292929;
+  border-radius: 0.25rem;
+}
+.base-profile {
+  height: 277px;
+}
+.base-repo {
+  height: 91px;
+  margin-bottom: 15px;
+}
+
+.avatar-container {
+  position: absolute;
+  top: -56px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animate-skeleton {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.text-container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skeleton-text {
+  width: 126px;
+  height: 17px;
+}
+
+.skeleton-text-small {
+  width: 71px;
+  height: 11px;
+  margin-top: 12px;
+}
+.skeleton-paragraph {
+  width: 305px;
+  height: 17px;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 34px;
+  margin-bottom: 17px;
+}
+
+.skeleton-repo {
+  padding: 25px;
+  display: grid;
+  gap: 7px;
+}
+@keyframes pulse {
+  0% {
+    background-color: #222222;
+  }
+  50% {
+    background-color: #484848;
+  }
+  100% {
+    background-color: #222222;
+  }
+}

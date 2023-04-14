@@ -25,7 +25,7 @@ function useFetchUser(user_name) {
 
       setTimeout(() => {
         setUserLoading(false);
-      }, 5000);
+      }, 2000);
     };
     fetchUser();
     // cancel fetch if component unmounts

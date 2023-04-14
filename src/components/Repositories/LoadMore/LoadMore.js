@@ -1,4 +1,5 @@
 import React from "react";
+import "./LoadMore.css";
 
 function LoadMore({ repos, handleLoadMoreRepositories, repoLoading, user }) {
   const isAllReposLoaded = repos.length == user.public_repos;
@@ -7,7 +8,7 @@ function LoadMore({ repos, handleLoadMoreRepositories, repoLoading, user }) {
     return (
       <button
         onClick={handleLoadMoreRepositories}
-        className="bg-hipo-green w-full rounded-[0.25rem] border border-hipo-light-green p-[13px] my-6 hover:bg-hipo-light-green hover:text-black hover:border-hipo-green"
+        className="loadmore-btn h3-bold"
       >
         {repoLoading ? "Loading..." : "Load More"}
       </button>
@@ -15,9 +16,7 @@ function LoadMore({ repos, handleLoadMoreRepositories, repoLoading, user }) {
   }
 
   if (isAllReposLoaded) {
-    return (
-      <h2 className="text-[1.125rem] text-center my-2">No More Repositories</h2>
-    );
+    return <h2 className="h2 text-center text-white">No More Repositories</h2>;
   }
 }
 

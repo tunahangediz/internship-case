@@ -1,6 +1,7 @@
 import React from "react";
 import Stat from "./Stat";
 import { convertToK } from "../../../lib/helpers";
+import "./UserStats.css";
 
 function UserStats({ user }) {
   const { public_repos, followers, following } = user;
@@ -9,7 +10,7 @@ function UserStats({ user }) {
   const followingK = convertToK(following);
 
   return (
-    <div className="flex w-full justify-between mt-[3.125rem] mb-[2.813rem] px-6 sm:pl-[3.125rem] sm:pr-[3.875rem]">
+    <div className="stats">
       <Stat value={public_repos} label="Repositories" />
       <Stat value={followingK} label="Following" />
       <Stat value={followersK} label="Followers" />

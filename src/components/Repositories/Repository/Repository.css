@@ -1,0 +1,42 @@
+.repository {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a0a;
+  border: 1px solid #292929;
+  border-radius: 4px;
+  padding: 22px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.repository:hover {
+  background-color: #ffffff;
+  border-color: #292929;
+  color: #0a0a0a;
+}
+
+.repo-info {
+}
+
+.repo-stats {
+  text-align: right;
+}
+
+.repo-description {
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #acacac;
+}
+
+.hipo-dark-gray {
+  color: #acacac;
+}
+.repo-stars {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { removeAt } from "../../lib/helpers";
 import Input from "./Input";
+import "./SearchForm.css";
 
 function SearchForm() {
   const [username, setUsername] = useState("");
@@ -16,7 +17,7 @@ function SearchForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="w-full" onSubmit={handleSubmit}>
       <Input username={username} setUsername={setUsername} />
     </form>
   );

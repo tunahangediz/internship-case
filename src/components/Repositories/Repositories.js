@@ -1,7 +1,9 @@
 import React from "react";
-import Repository from "./Repository";
 import useLoadMoreRepo from "../../hooks/useLoadMoreRepo";
-import LoadMore from "./LoadMore";
+import LoadMore from "./LoadMore/LoadMore";
+import Repository from "./Repository/Repository";
+import "./Repositories.css";
+
 function Repositories({ repos, username, user }) {
   // useLoadMoreRepo hook to fetch more repos from github api
   const { loadMore, moreRepos, repoLoading } = useLoadMoreRepo(username);
@@ -18,23 +20,23 @@ function Repositories({ repos, username, user }) {
 
   return (
     <>
-      <h2 className="text-[1.125rem] text-center mt-[30px] mb-[15px]">
-        Repositories
-      </h2>
-      <div className="grid gap-[0.938rem] w-full">
+      <h2 className="h2 repo-heading">Repositories</h2>
+      <div className="repositories">
         {repos.map((repo) => (
           <Repository key={repo.id} repo={repo} />
         ))}
       </div>
-      <LoadMore
-        repos={repos}
-        handleLoadMoreRepositories={handleLoadMoreRepositories}
-        repoLoading={repoLoading}
-        user={user}
-      />
+      {repos.length != 0 && (
+        <LoadMore
+          repos={repos}
+          handleLoadMoreRepositories={handleLoadMoreRepositories}
+          repoLoading={repoLoading}
+          user={user}
+        />
+      )}
       {/* if repos length is 0 then show no repositories */}
-      {repos.length === 0 && (
-        <h2 className="text-[1.125rem] text-center">No Repositories</h2>
+      {repos.length == 0 && (
+        <h2 className="h2 text-center text-white">No Repositories</h2>
       )}
     </>
   );

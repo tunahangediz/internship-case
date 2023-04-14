@@ -3,9 +3,9 @@ import SkeletonText from "./SkeletonText";
 
 function SkeletonRepo() {
   return (
-    <div className="max-w-[305px] grid gap-[7px]">
-      <SkeletonText className="w-[126px] h-[17px]" />
-      <SkeletonText />
+    <div className="skeleton-repo">
+      <SkeletonText className="skeleton-text" />
+      <SkeletonText className="skeleton-paragraph" />
     </div>
   );
 }
