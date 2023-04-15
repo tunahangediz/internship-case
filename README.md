@@ -4,19 +4,19 @@ This web application allows users to explore Github users and their repositories
 
 ## Basic Features
 
-- Search for Github users by their username with or without '@'
-- View user details, such as name, avatar, user_name, number of repositories and followers/following
-- View user repositories, including name, description and number of stars
-- Click on a repository to open it on Github in a new browser tab
-- Display a loading indicator while requests are pending
+- [x] Search for Github users by their username with or without '@'
+- [x] View user details, such as name, avatar, user_name, number of repositories and followers/following
+- [x] View user repositories, including name, description and number of stars
+- [x] Click on a repository to open it on Github in a new browser tab
+- [x] Display a loading indicator while requests are pending
 
 ## Bonus Features
 
-- Results chaced on local storage. If you search with same username you will get the cached results without making new api request
-- Load more repositories by clicking on the "Load More" button and display loading indicator
-- Deployed on Vercel - [Visit Website](https://github-profile-explorer-pink.vercel.app/)
-- Display a custom error page if the API request fails or there are no search results. Display a message when there are no search results
-- The website responsive and suitable for different screen sizes
+- [x] Results chaced on local storage. If you search with same username you will get the cached results without making a new api request
+- [x] Load more repositories by clicking on the "Load More" button and display loading indicator
+- [x] Deployed on Vercel - [Visit Website](https://github-profile-explorer-pink.vercel.app/)
+- [x] Display a custom error page if the API request fails or there are no search results. Display a message when there are no search results
+- [x] The website responsive and suitable for different screen sizes
 
 ## Getting Started
 

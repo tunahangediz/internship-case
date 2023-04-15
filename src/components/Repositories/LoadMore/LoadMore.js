@@ -8,7 +8,7 @@ function LoadMore({ repos, handleLoadMoreRepositories, repoLoading, user }) {
     return (
       <button
         onClick={handleLoadMoreRepositories}
-        className="loadmore-btn h3-bold"
+        className="loadmore-btn h3-bold text-white"
       >
         {repoLoading ? "Loading..." : "Load More"}
       </button>
