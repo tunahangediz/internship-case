@@ -55,6 +55,7 @@
 .skeleton-text {
   width: 126px;
   height: 17px;
+  margin-top: 2px;
 }
 
 .skeleton-text-small {
@@ -101,6 +102,7 @@
     max-width: 548px;
     width: 100%;
     margin: auto;
+    padding: 0;
     padding-top: 166px;
   }
 }
